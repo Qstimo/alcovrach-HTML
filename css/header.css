@@ -1,0 +1,125 @@
+.header {
+  position: relative;
+  height: 80px;
+  margin-bottom: 40px;
+  @media (min-width: 700px) {
+    height: 135px;
+    margin-bottom: 0;
+  }
+}
+.header__info__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__info__geo {
+  display: flex;
+  align-items: center;
+}
+.header__logo__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo__text {
+  font-size: 14;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.header__btn {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  width: 24px;
+  cursor: pointer;
+  z-index: 3;
+  @media (min-width: 700px) {
+    display: none;
+  }
+}
+.header__btn span,
+.header__btn span::before,
+.header__btn span::after {
+  background-color: #67d23c;
+  height: 2px;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  display: block;
+  position: absolute;
+}
+.header__btn span::before {
+  content: '';
+  top: -6px;
+}
+.header__btn span::after {
+  top: 6px;
+  content: '';
+}
+
+.header__info__container {
+  display: none;
+  @media (min-width: 700px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    margin-left: 40px;
+  }
+}
+.header__info__phone {
+  display: flex;
+}
+.header__info__phone .links__social {
+  margin-right: 15px;
+}
+.header__info__phone .button {
+  width: 220px;
+}
+.button.inverted {
+  background-color: transparent;
+  color: #67d23c;
+  outline: #4ec259 2px solid;
+  margin-right: 20px;
+}
+.navbar {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: -500px;
+  transition: all 1s ease-in-out;
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  @media (min-width: 700px) {
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    padding: 20px 0;
+  }
+}
+.navbar__list {
+  @media (min-width: 700px) {
+    display: flex;
+  }
+}
+.navbar__link {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  @media (min-width: 700px) {
+    margin-right: 24px;
+  }
+}
+._active {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
